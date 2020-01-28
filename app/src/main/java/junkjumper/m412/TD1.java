@@ -14,7 +14,9 @@ import org.w3c.dom.Text;
 public class TD1 extends AppCompatActivity {
 
     private TextView mTextMessage;
-    private int count = 0;
+
+    Personne user = new Personne();
+
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -40,39 +42,11 @@ public class TD1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_td1);
-        Button p = (Button)findViewById(R.id.plus);
-        Button m = (Button)findViewById(R.id.moins);
+
+        Button b = (Button)findViewById(R.id.);
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-
-
-        p.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                TextView displayBoop = (TextView)findViewById(R.id.boop);
-                String total = displayBoop.getText().toString();
-                count++;
-                if(count < 0) {
-                    count = 0;
-                }
-                displayBoop.setText(""+count);
-
-            }
-        });
-
-        m.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                TextView displayBoop = (TextView)findViewById(R.id.boop);
-                String total = displayBoop.getText().toString();
-                count--;
-                if(count < 0) {
-                    count = 0;
-                }
-                displayBoop.setText(""+count);
-            }
-        });
 
 
 
@@ -82,31 +56,3 @@ public class TD1 extends AppCompatActivity {
 
 
 }
-
-/*
-public class ex3 extends AppCompatActivity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ex3);
-    }
-
-    protected void plusUn(View v){
-        TextView e = (TextView) findViewById(R.id.textView);
-        String texte=e.getText().toString();
-        int compteur= Integer.parseInt(texte);
-        compteur = compteur + 1;
-        String texteF= ""+compteur;
-        e.setText(texteF);
-    }
-
-    protected void moinsUn(View v){
-        TextView e = (TextView) findViewById(R.id.textView);
-        String texte=e.getText().toString();
-        int compteur= Integer.parseInt(texte);
-        compteur = compteur - 1;
-        String texteF= ""+compteur;
-        e.setText(texteF);
-    }
-}*/
