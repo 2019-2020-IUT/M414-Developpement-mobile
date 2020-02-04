@@ -43,7 +43,7 @@ public class TD1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_td1);
 
-        Button b = (Button)findViewById(R.id.);
+        //Button b = (Button)findViewById(R.id);
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
